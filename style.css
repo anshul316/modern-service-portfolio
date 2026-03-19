@@ -1,0 +1,889 @@
+@media (min-width: 1400px) {
+    #marquee {
+        max-width: 100%;
+    }
+}
+.gap-3 {
+    gap: 1rem !important; 
+}
+
+/* 1. Main Orange Button (Consultation) */
+
+
+.btn-orange:hover {
+    background-color: var(--orange-hover) !important; 
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(216, 106, 42, 0.4);
+    color: white !important;
+}
+
+.btn-glass {
+    background: rgba(255, 255, 255, 0.1) !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-color: var(--accent-blue) !important;
+    color: var(--accent-blue) !important;
+    transform: translateY(-3px);
+}
+
+/* 3. Hover Lift Effect */
+.hover-lift {
+    transition: transform 0.3s ease;
+}
+
+.hover-lift:active {
+    transform: scale(0.95); 
+}
+
+/* Icon Animation */
+.btn-orange i {
+    transition: transform 0.3s ease;
+}
+
+.btn-orange:hover i {
+    transform: translateX(5px); 
+}
+      
+      
+        .text-blue-gradient {
+            background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+
+       
+
+        body {
+            /* font-family: 'Inter', sans-serif; */
+            overflow-x: hidden;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        /* --- Typography & Accents --- */
+        .gradient-text {
+            background: var(--gradient-blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .accent-line {
+            height: 4px;
+            width: 60px;
+            background: linear-gradient(to right, #0d6efd, #ffc107);
+            border-radius: 10px;
+            margin: 25px auto;
+        }
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+.marquee-content {
+  display: inline-block;
+  animation: scroll-marquee 25s linear infinite;
+}
+
+.marquee-item {
+  display: inline-block;
+  font-size: 3rem; 
+  font-weight: 800;
+  margin: 0 40px;
+  color: #0d6efd;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  /* Modern look ke liye outline style */
+  -webkit-text-stroke: 1px #0d6efd;
+  color: transparent; 
+  transition: all 0.3s;
+}
+
+.marquee-item:hover {
+  color: #0d6efd;
+  -webkit-text-stroke: 0px;
+}
+
+@keyframes scroll-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+.text-primary {
+    --bs-text-opacity: 1;
+    color: rgb(28 101 208) !important;
+}
+
+#top-nav {
+    --bs-bg-opacity: 1;
+    background-color: rgb(62 109 161 / 63%) !important;
+
+}
+
+.text-bold {
+  font-weight: bold;
+}
+/* Navbar */
+.logo-box {
+    background: var(--primary-dark);
+    color: white;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+.rounded-pill {
+    /* border-radius: var(--bs-border-radius-pill) !important; */
+    background: #5aacffe0;
+    border-radius: 10px !important;
+    color: #fff;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #faf1f1 !important;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--orange-main) !important;
+}
+.nav-link{
+  position: relative;
+}
+
+.nav-link::after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: rgb(35, 39, 255);
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.nav-link:hover::after{
+  width: 100%;
+}
+/* Hero */
+/* Hero Section with Zoom Animation */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(13, 27, 62, 0.8), rgba(13, 27, 62, 0.7)), 
+                url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    /* Animation call */
+    animation: zoomBackground 20s infinite alternate ease-in-out;
+}
+
+/* Keyframes for Smooth Background Zoom & Pan */
+@keyframes zoomBackground {
+    0% {
+        transform: scale(1);
+        background-position: center;
+    }
+    100% {
+        transform: scale(1.15);
+        background-position: top right; 
+    }
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+.text-blue-gradient {
+    color: var(--accent-blue);
+    background: linear-gradient(45deg, #4da6ff, #99ccff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-badge {
+    display: inline-flex;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 100px;
+    backdrop-filter: blur(10px);
+}
+
+/* Buttons */
+.btn-orange {
+    background: var(--orange-main);
+    color: white;
+    border: none;
+    font-weight: 600;
+}
+
+.btn-orange:hover {
+    background: var(--orange-hover);
+    color: white;
+}
+
+.btn-glass {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.hover-lift {
+    transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Services */
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: rgba(13, 27, 62, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    color: var(--primary-dark);
+}
+.click-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#click-btn:hover {
+  background-color: #0056b3;
+}
+
+.card:hover {
+    background: var(--primary-dark);
+    color: white !important;
+}
+
+.card:hover .text-muted {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.card:hover .icon-box {
+    background: rgba(255,255,255,0.1);
+    color: var(--accent-blue);
+}
+
+.text-orange { color: var(--orange-main); }
+
+/* Scroll Mouse Animation */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mouse {
+    width: 24px;
+    height: 38px;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.wheel {
+    width: 3px;
+    height: 7px;
+    background:blue;
+    border-radius: 2px;
+    margin-top: 8px;
+    animation: scroll 1.5s infinite;
+}
+#service-button{
+
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    font-weight: 800;
+}
+
+
+.text-para{
+    color: #0a1128;
+}
+        /* --- Philosophy Card (Professional Glass) --- */
+        .philosophy-card {
+            background: rgba(13, 110, 253, 0.03);
+            border: 1px solid rgba(13, 110, 253, 0.1);
+            border-radius: 30px;
+            padding: 60px 30px;
+            transition: all 0.4s ease;
+        }
+
+        .philosophy-card:hover {
+            background: rgba(13, 110, 253, 0.05);
+            transform: translateY(-5px);
+        }
+
+       .accent-line {
+            height: 4px;
+            width: 60px;
+            background: linear-gradient(to right, #0d6efd, #ffc107);
+            border-radius: 10px;
+            margin: 25px auto;
+        }
+
+         /* --- Feature Cards (Modern Floating) --- */
+        .feature-card {
+            background: #ffffff;
+            border: 1px solid #f0f0f0;
+            border-radius: 24px;
+            padding: 45px 25px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 50px rgba(13, 110, 253, 0.12);
+            border-color: rgba(13, 110, 253, 0.2);
+        }
+
+        /* Icon Box Styles */
+        .icon-box {
+            width: 65px;
+            height: 65px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 1.6rem;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover .icon-box {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+
+
+        .feature-card h5 {
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            line-height: 1.6;
+            color: #6c757d;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .display-3 { font-size: 2.5rem !important; }
+            .philosophy-card { padding: 40px 20px; }
+        }
+
+
+
+        .result-card {
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 300px;
+}
+
+.result-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.result-card h1 {
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 1rem;
+}
+
+/* Matching the specific orange in your image for card 03 if preferred */
+.bg-custom-orange {
+  background: linear-gradient(135deg, #ff8c00 0%, #ff4500 100%) !important;
+}
+/* Footer Custom Styling */
+.footer-section {
+    background-color: 03041b;
+    color: white;
+}
+.text-muted {
+    --bs-text-opacity: 1;
+    color: #fff!important;
+}
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #fff;;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--orange-main);
+    padding-left: 5px;
+}
+
+.footer-contact li {
+    color:white;
+    margin-bottom: 15px;
+}
+
+/* Social Media Icons */
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+    background: var(--orange-main);
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* Newsletter Input Styling */
+.newsletter-form .form-control {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 8px 0 0 8px;
+    padding: 12px;
+}
+
+.newsletter-form .form-control:focus {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+    border-color: var(--accent-blue);
+    color: white;
+}
+
+.newsletter-form .btn-orange {
+    border-radius: 0 8px 8px 0 !important;
+    padding: 0 20px;
+}
+
+/* Specific Blue Light Text for Footer */
+.text-blue-light {
+    color: var(--accent-blue);
+}
+/* Keyframes for Smooth Background Zoom & Pan */
+@keyframes zoomBackground {
+    0% {
+        transform: scale(1);
+        background-position: center;
+    }
+    100% {
+        transform: scale(1.15); 
+        background-position: top right; /* Move effect */
+    }
+}
+
+@keyframes scroll {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(12px); opacity: 0; }
+}
+
+@keyframes iconGlow {
+    from { filter: drop-shadow(0 0 2px #4da6ff); }
+    to { filter: drop-shadow(0 0 8px #4da6ff); }
+}
+
+.anim-glow { animation: iconGlow 2s infinite alternate; }
+
+@media (max-width: 991px) {
+    .hero-section { text-align: center; }
+    .hero-badge { margin: 0 auto; }
+    .d-flex.flex-wrap { justify-content: center; }
+}
+
+
+/* ==============SERVICES PAGE================= */
+    
+   .bg-light {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+}
+.gradient-text {
+color: blue;
+
+font-weight: bold;
+}
+
+
+body {
+    background-color: #fdfdfd;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+
+/* Hover Effect */
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04);
+    border-color: #d1d9e0;
+}
+
+
+
+
+.service-card h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    font-size: 0.92rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Service Card Styling */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+
+.service-card:hover .icon-box {
+    transform: rotateY(180deg); /* Modern flip effect */
+}
+
+
+
+/* Featured Card Style (Optional) */
+.service-card.featured {
+ 
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* ===================VISIT HTML PAGE==================== */
+
+
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            background-color: #ffffff;
+            color: #1e2768d1;
+        }
+
+        /* --- Typography & Accents --- */
+        .gradient-text {
+            background: var(--gradient-blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .accent-line {
+            height: 4px;
+            width: 60px;
+            background: linear-gradient(to right, #0d6efd, #ffc107);
+            border-radius: 10px;
+            margin: 25px auto;
+        }
+
+        /* --- Philosophy Card (Professional Glass) --- */
+        .philosophy-card {
+            background: rgba(13, 110, 253, 0.03);
+            border: 1px solid rgba(13, 110, 253, 0.1);
+            border-radius: 30px;
+            padding: 60px 30px;
+            transition: all 0.4s ease;
+        }
+
+        .philosophy-card:hover {
+            background: rgba(13, 110, 253, 0.05);
+            transform: translateY(-5px);
+        }
+
+        /* --- Feature Cards (Modern Floating) --- */
+        .feature-card {
+            background: #ffffff;
+            border: 1px solid #f0f0f0;
+            border-radius: 24px;
+            padding: 45px 25px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 50px rgba(13, 110, 253, 0.12);
+            border-color: rgba(13, 110, 253, 0.2);
+        }
+
+        /* Icon Box Styles */
+        .icon-box {
+            width: 65px;
+            height: 65px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 1.6rem;
+            color: rgb(0, 0, 0);
+            transition: transform 0.3s ease;
+            background-color: #2210a669;
+        }
+
+        .feature-card:hover .icon-box {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+
+        .feature-card h5 {
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            line-height: 1.6;
+            color: #6c757d;
+        }
+        
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .display-3 { font-size: 2.5rem !important; }
+            .philosophy-card { padding: 40px 20px; }
+        }
+
+        /* =================exque page============================== */
+         body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f6fcff;
+            color: #1a1a1a;
+            margin: 0;
+        }
+
+        /* --- Navbar Customization --- */
+        .navbar {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Book Consultation Button Style */
+        .btn-consult {
+            border: 2px solid #0d6efd;
+            color: #0d6efd;
+            border-radius: 50px; /* Fully Rounded */
+            padding: 8px 20px;
+            font-weight: 600;
+            background: transparent;
+            transition: 0.3s;
+        }
+
+        .btn-consult:hover {
+            background: #0d6efd;
+            color: #fff;
+        }
+
+        .gradient-text { color: rgb(10, 10, 126); }
+
+        /* --- Card Styling --- */
+        .service-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0px 4px 15px rgba(0, 100, 200, 0.05);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 8px 30px rgba(0, 100, 200, 0.1);
+        }
+
+        .icon-box {
+            width: 60px; height: 60px;
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; margin-bottom: 20px;
+        }
+
+
+        /* --- Animations --- */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal-card {
+            opacity: 0;
+            animation: fadeInUp 0.8s forwards;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+        .delay-6 { animation-delay: 0.6s; }
+
+
+
+        /* ==================fill ====================== */
+         
+
+.contact-section {
+    min-height: 100vh;
+    background: radial-gradient(circle at top right, #d5d6dd, #0a1128);
+    padding: 80px 0;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.badge {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 20px;
+    font-size: 0.8rem;
+}
+
+.divider {
+    height: 3px;
+    width: 60px;
+    background: linear-gradient(90deg, #ff8c00, #4facfe);
+    border-radius: 10px;
+}
+
+/* Glassmorphism Card Effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Styles */
+.custom-input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px 18px;
+}
+
+.custom-input::placeholder { color: rgba(255, 255, 255, 0.5); }
+.custom-input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ff8c00;
+    color: #fff;
+    box-shadow: none;
+}
+
+/* Buttons */
+.btn-orange {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.btn-orange:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+}
+
+.btn-blue {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.icon-box, .info-icon {
+    width: 45px;
+    height: 45px;
+    background: rgba(0, 198, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
