@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exequa - Contact Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+  <div id="header-placeholder"></div>
+<section class="contact-section d-flex align-items-center">
+    <div class="container text-center">
+        <div class="header-content animate__animated animate__fadeInDown">
+            <span class="badge rounded-pill mb-3">GET IN TOUCH</span>
+            <h1 class="display-4 fw-bold text-white">Let's Bring Structure to Your <span class="text-gradient">Success</span></h1>
+            <div class="divider mx-auto mb-4"></div>
+            <p class="text-light-50 mb-5">Partner with Exequa today and experience operational excellence <br> backed by precision</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-5 col-md-6 animate__animated animate__fadeInLeft">
+                <div class="glass-card h-100">
+                    <h3 class="text-white text-start mb-4">Book Your Consultation</h3>
+                    <form>
+                        <input type="text" class="form-control custom-input mb-3" placeholder="Your Name">
+                        <input type="email" class="form-control custom-input mb-3" placeholder="Your Email">
+                        <textarea class="form-control custom-input mb-4" rows="5" placeholder="Tell us about your needs..."></textarea>
+                        <button class="btn btn-orange w-100 py-3">Send Message <span class="ms-2">⟳</span></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 animate__animated animate__fadeInRight">
+                <div class="glass-card mb-4 text-start">
+                    <div class="icon-box mb-3">📅</div>
+                    <h4 class="text-white">Schedule a Call</h4>
+                    <p class="text-muted small">Book a time that works for you and let's discuss how we can help streamline your operations</p>
+                    <button class="btn btn-blue w-100">Book on Calendly →</button>
+                </div>
+
+                <div class="glass-card text-start">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="info-icon me-3">📧</div>
+                        <div>
+                            <small class="text-muted d-block">Email</small>
+                            <span class="text-white">contact@exequa.com</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="info-icon me-3">👥</div>
+                        <div>
+                            <small class="text-muted d-block">Location</small>
+                            <span class="text-white">Remote Global Support</span>
+                        </div>
+                    </div>
+                    <hr class="text-muted">
+                    <p class="small text-muted mb-0">🔒 Your business information is treated with the highest level of discretion</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ <div id="footer-placeholder"></div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Initialize AOS (Animate on Scroll)
+        AOS.init({
+            once: true,
+            easing: 'ease-out-quad'
+        });
+
+        async function loadComponent(id, file) {
+            try {
+                const response = await fetch(file);
+                if (response.ok) {
+                    const data = await response.text();
+                    document.getElementById(id).innerHTML = data;
+                }
+            } catch (error) {
+                console.error("Error loading component:", error);
+            }
+        }
+
+        loadComponent("header-placeholder", "header.html");
+        loadComponent("footer-placeholder", "footer.html");
+    </script>
+
+</body>
+</html>
